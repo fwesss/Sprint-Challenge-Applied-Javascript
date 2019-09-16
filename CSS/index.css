@@ -208,8 +208,8 @@ body {
   align-items: none;
   justify-content: space-evenly;
   width: 100%;
-  margin-top: 16px;
   flex-wrap: wrap;
+  margin-top: 16px;
 }
 @media (min-width: 1200px) {
   .cards-container {
@@ -222,10 +222,10 @@ body {
   flex-direction: column;
   align-items: none;
   justify-content: space-between;
-  background-color: #fff;
   width: 380px;
   margin-bottom: 16px;
   padding: 24px;
+  background-color: #fff;
 }
 .cards-container .card .headline {
   font-size: 25px;
@@ -239,18 +239,18 @@ body {
   margin-top: 15px;
 }
 .cards-container .card .author .img-container {
+  height: 40px;
   padding-right: 10px;
   border-right: 1px solid lightgrey;
-  height: 40px;
 }
 .cards-container .card .author .img-container img {
   width: 40px;
 }
 .cards-container .card .author span {
   padding-left: 10px;
+  font-weight: bold;
   font-size: 12px;
   letter-spacing: 1px;
-  font-weight: bold;
 }
 .carousel {
   width: 100%;
