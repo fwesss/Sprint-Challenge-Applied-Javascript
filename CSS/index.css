@@ -258,10 +258,10 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 500px;
   position: relative;
-  overflow: hidden;
+  height: 500px;
   margin-top: 16px;
+  overflow: hidden;
 }
 @media (min-width: 1200px) {
   .carousel {
@@ -274,13 +274,13 @@ body {
   flex-direction: row;
   align-items: none;
   justify-content: center;
-  color: #fff;
-  background-color: #333;
-  font-size: 40px;
-  border-radius: 50%;
   position: absolute;
   width: 50px;
   height: 50px;
+  color: #fff;
+  font-size: 40px;
+  background-color: #333;
+  border-radius: 50%;
   cursor: pointer;
 }
 .carousel .left-button:hover,
@@ -302,5 +302,18 @@ body {
 .carousel img {
   width: 100%;
   display: none;
+}
+.carousel .active {
+  z-index: -1;
+  display: flex;
+  animation: fade 1s forwards;
+}
+@keyframes fade {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=index.css.map */
