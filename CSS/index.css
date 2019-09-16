@@ -306,6 +306,8 @@ body {
 .carousel .active {
   z-index: -1;
   display: flex;
+}
+.carousel .fade {
   animation: fade 1s forwards;
 }
 @keyframes fade {

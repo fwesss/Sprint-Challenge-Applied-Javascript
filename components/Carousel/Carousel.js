@@ -56,23 +56,23 @@
   carouselImages[activeImage].className = 'active';
 
   leftButton.addEventListener('click', () => {
-    carouselImages[activeImage].classList.remove('active');
+    carouselImages[activeImage].classList.remove('active', 'fade');
     if (activeImage - 1 < 0) {
       activeImage = carouselImages.length - 1;
     } else {
       activeImage -= 1;
     }
-    carouselImages[activeImage].classList.add('active');
+    carouselImages[activeImage].classList.add('active', 'fade');
   });
 
   rightButton.addEventListener('click', () => {
-    carouselImages[activeImage].classList.remove('active');
+    carouselImages[activeImage].classList.remove('active', 'fade');
     if (activeImage + 1 > carouselImages.length - 1) {
       activeImage = 0;
     } else {
       activeImage += 1;
     }
-    carouselImages[activeImage].classList.add('active');
+    carouselImages[activeImage].classList.add('active', 'fade');
   });
 
   document.querySelector('.carousel-container').appendChild(carousel);
