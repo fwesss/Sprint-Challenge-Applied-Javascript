@@ -18,6 +18,23 @@
       tab.className = 'tab';
       tab.textContent = topic;
 
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.card').forEach((card) => {
+          let category = topic;
+          if (topic === 'node.js') {
+            category = 'node';
+          }
+
+          if (card.getAttribute('category') !== category) {
+            card.style.display = 'none';
+            card.classList.remove('fade');
+          } else {
+            card.style.display = 'flex';
+            card.classList.add('fade');
+          }
+        });
+      });
+
       tabs.push(tab);
     });
   } catch (e) {

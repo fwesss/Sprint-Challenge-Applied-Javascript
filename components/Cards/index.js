@@ -29,6 +29,7 @@
       articles[topic].forEach((article) => {
         const card = document.createElement('div');
         card.className = 'card';
+        card.setAttribute('category', `${topic}`);
 
         const headline = document.createElement('div');
         headline.className = 'headline';
