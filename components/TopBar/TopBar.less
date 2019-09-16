@@ -1,3 +1,6 @@
+@import "../../LESS/mixins";
+@import "../../LESS/variables";
+
 .top-bar {
   .width-100();
   .flex(center);
@@ -7,30 +10,32 @@
   .container {
     .width-100();
     .flex();
+    padding: 0 10px;
     color: @lambda-times-color-white;
     letter-spacing: 1px;
-    padding: 0 10px;
-    @media(min-width: 1280px){
+    @media (min-width: 1280px) {
       width: 1280px;
     }
+
     .container-left {
       .flex(none, center);
       flex: 1;
       font-size: 11px;
       span {
-        cursor: pointer;
         margin-right: 25%;
         font-weight: bold;
+        cursor: pointer;
       }
     }
+
     .container-center {
       .flex(center, center);
       flex: 3;
       font-size: 9px;
       span {
-        cursor: pointer;
         margin-right: 5%;
-        &:last-child{
+        cursor: pointer;
+        &:last-child {
           margin-right: 0;
         }
         &:hover {
@@ -38,11 +43,12 @@
         }
       }
     }
+
     .container-right {
       .flex(flex-end, center);
       flex: 1;
-      font-size: 11px;
       font-weight: bold;
+      font-size: 11px;
       span {
         cursor: pointer;
       }
