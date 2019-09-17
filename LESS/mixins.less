@@ -1,3 +1,5 @@
+@import "variables";
+
 .width-100 {
   width: 100%;
 }
@@ -8,7 +10,17 @@
 
 .flex(@jc: none, @ai: none, @dir: row) {
   display: flex;
-  justify-content: @jc;
-  align-items: @ai;
   flex-direction: @dir;
+  align-items: @ai;
+  justify-content: @jc;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.3;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

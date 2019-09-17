@@ -1,22 +1,27 @@
+@import "../../LESS/mixins";
+@import "../../LESS/variables";
+
 .carousel {
   .width-100();
   .flex(center, center);
-  height: 500px;
   position: relative;
-  overflow: hidden;
+  height: 500px;
   margin-top: 16px;
-  @media(min-width: 1200px){
+  overflow: hidden;
+  @media (min-width: 1200px) {
     width: 1200px;
   }
-  .left-button, .right-button {
+
+  .left-button,
+  .right-button {
     .flex(center);
-    color: @lambda-times-color-white;
-    background-color: @lambda-times-color-primary;
-    font-size: 40px;
-    border-radius: 50%;
     position: absolute;
     width: 50px;
     height: 50px;
+    color: @lambda-times-color-white;
+    font-size: 40px;
+    background-color: @lambda-times-color-primary;
+    border-radius: 50%;
     cursor: pointer;
     &:hover {
       color: @lambda-times-color-primary;
@@ -24,18 +29,30 @@
       border: 2px solid @lambda-times-color-primary;
     }
   }
+
   .left-button {
-    top: 50%; 
+    top: 50%;
     left: 25px;
     transform: translate(0, -50%);
   }
+
   .right-button {
-    top: 50%; 
+    top: 50%;
     right: 25px;
     transform: translate(0, -50%);
   }
+
   img {
     .width-100();
     display: none;
+  }
+
+  .active {
+    z-index: -1;
+    display: flex;
+  }
+
+  .fade {
+    animation: fade 1s forwards;
   }
 }
